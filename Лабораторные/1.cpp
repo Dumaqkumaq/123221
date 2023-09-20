@@ -26,6 +26,6 @@ int main(){
     std::cout<<"Radius: ";
     std::cin>>radius;
     dlina = pi*2*radius;
-    std::cout<<"Ploshad -> "<<dlina;
+    std::cout<<"Dlina -> "<<dlina;
 
 }
