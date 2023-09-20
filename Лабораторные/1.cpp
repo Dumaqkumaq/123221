@@ -21,11 +21,11 @@ int main(){
     float pi = 3.14;
     // используем double на случай, если пользователь
     // введет макс значение float
-    double ploshad;
+    double dlina;
 
     std::cout<<"Radius: ";
     std::cin>>radius;
-    ploshad = pi*2*radius;
-    std::cout<<"Ploshad -> "<<ploshad;
+    dlina = pi*2*radius;
+    std::cout<<"Ploshad -> "<<dlina;
 
 }
