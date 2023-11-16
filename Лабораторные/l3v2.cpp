@@ -68,7 +68,7 @@ int main(){
         case 10:cout<<"October"; break;
         case 11:cout<<"November"; break;
         case 12:cout<<"December"; break;
-        default:cout<<"Wrong number";
+        default:cout<<"Wrong number"; break;
     }
 
     /*
