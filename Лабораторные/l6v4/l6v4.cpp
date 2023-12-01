@@ -24,7 +24,7 @@ int main(){
     cout<<(char)(168)<<" = 168\t\t"<<(char)(184)<<" = 184"<<endl;
 
     char arr[] = "цкнгшщзхфвпрлджчсмтб";
-    char str[100] = "Это тестовая Строка";
+    char str[100] = "Это Тестовая Строка";
     int i = 0;
     if(str[0]=='\0'){
         cout<<"Введите строку: ";
@@ -38,7 +38,8 @@ int main(){
         bool fl = false;
         int len = 0;
         while(arr[len] != '\0'){
-            if(arr[len] == str[i])
+            char simvB = tolower(str[i]);
+            if(arr[len] == simvB)
                 fl = true;
             len += 1;
         }
@@ -54,7 +55,7 @@ int main(){
         задание 2
 */
     int N ; // кол-во слов мин длины
-    char check_ch[2]; // массив проверяемых букв
+    string check_ch; // массив проверяемых букв
     
     //получение кол-во слов и букв из инпута
     ifstream in("input.txt");
@@ -76,11 +77,13 @@ int main(){
         in>>N;
         in>>check_ch;
         //переводим полученные буквы в строчные
-        check_ch[0] = tolower(check_ch[0]);
-        check_ch[1] = tolower(check_ch[1]);
+        int j = 0;
+        while(check_ch[j] != '\0'){
+
+        }
         //вывод для проверки
         cout<<endl<<"N = "<<N<<endl;
-        cout<<"Проверяемые буквы = "<<check_ch[0]<<" "<<check_ch[1]<<endl;
+        cout<<"Проверяемые буквы = "<<check_ch<<endl;
         in.close();
     }
 
