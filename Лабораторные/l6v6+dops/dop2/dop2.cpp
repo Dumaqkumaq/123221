@@ -67,25 +67,27 @@ int main(){
             for(int j = 0;j<size(word);j++){
                 word[j] = tolower(word[j]);
             }
-            //избавляемся от троеточия
-            if(word.find("...") != string::npos){
-                word.erase(word.find("..."),3);
-            }
-            //избавляемся от троеточия x2
-            if(word.find("...") != string::npos){
-                word.erase(word.find("..."),3);
-            }
-            //избавляемся от знака препинания в начале
-            if(znaki.find(word[0]) != string::npos){
-                word.erase(0,1);
-            }
-            //избавляемся от знака препинания в конце
-            if(znaki.find(word[size(word)-1]) != string::npos){
-                word.erase(size(word)-1,1);
+            if(!(word.find(iskl) != string::npos)){
+                //избавляемся от троеточия
+                if(word.find("...") != string::npos){
+                    word.erase(word.find("..."),3);
+                }
+                //избавляемся от троеточия x2
+                if(word.find("...") != string::npos){
+                    word.erase(word.find("..."),3);
+                }
+                //избавляемся от знака препинания в начале
+                if(znaki.find(word[0]) != string::npos){
+                    word.erase(0,1);
+                }
+                //избавляемся от знака препинания в конце
+                if(znaki.find(word[size(word)-1]) != string::npos){
+                    word.erase(size(word)-1,1);
+                }
             }
             //обработка подходящего слова
-            if(word[size(word)-1] == check_ch || word == iskl){ //если последняя бува = искомой или слово = исключ
-                if(word == iskl && word[size(word)-1] == check_ch) //если слово = исключ и последняя бува = искомой
+            if(word[size(word)-1] == check_ch || word.find(iskl) != string::npos){ //если последняя бува = искомой или слово = исключ
+                if( word.find(iskl) != string::npos && word[size(word)-1] == check_ch) //если слово = исключ и последняя бува = искомой
                     continue; //пропуск обработки
                 //сортировка пузырьком (чтобы сразу отсортировать по длине)
                 //----
