@@ -28,7 +28,8 @@ int main(){
         bool flag = false; // если есть два одинаковых числа подряд
         cout<<"NEW NUMBERS: "<<endl;
         //заполняем новыми числами с консоли
-        for(int i = K;i<(S+K);i++){
+        cin>>A[K];
+        for(int i = K+1;i<(S+K);i++){
             if(!flag){
                 //если нет одинаковых чисел
                 cin>>A[i];
